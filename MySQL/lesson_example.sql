@@ -27,10 +27,13 @@ ALTER TABLE students ADD COLUMN email VARCHAR(100);
 -- Inserting some sample data for demo purposes
 INSERT INTO subjects (subject_name) VALUES ('Mathematics'), ('History'), ('Physics');
 
-INSERT INTO students (first_name, last_name, subject_id, grade)
-VALUES ('John', 'Doe', 1, 88.5),
-       ('Jane', 'Smith', 2, 90.0),
-       ('Robert', 'Johnson', 3, 85.5);
+INSERT INTO students (first_name, last_name, subject_id, grade, email)
+VALUES ('John', 'Doe', 1, 88.5, 'johndoe@gmail.com'),
+       ('Jane', 'Smith', 2, 90.0, 'janesmith@gmail.com'),
+       ('Robert', 'Johnson', 3, 85.5, 'robertjohnson@gmail.com');
+
+-- 2. Update existing data
+UPDATE students SET grade = 89.5 WHERE id = 3;
 
 -- 1. Basic SELECT statements
 SELECT * FROM students;
@@ -76,11 +79,3 @@ INNER JOIN clubs c ON sc.club_id = c.id;
 -- 3. Sub-queries
 SELECT first_name FROM students WHERE subject_id IN (SELECT id FROM subjects WHERE subject_name = 'History');
 SELECT first_name FROM students WHERE grade > (SELECT AVG(grade) FROM students);
-
--- Section 4: Data Manipulation Statements
-
--- 1. Insert new data
-INSERT INTO students (first_name, last_name, subject_id, grade) VALUES ('Alice', 'Adams', 2, 87.5);
-
--- 2. Update existing data
-UPDATE students SET grade = 89.5 WHERE id = 3;
