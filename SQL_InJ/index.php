@@ -1,6 +1,7 @@
+<!-- php -S localhost:8000 -->
 <?php
 
-$host = 'localhost';
+$host = '127.0.0.1';
 $db   = 'ctf_challenge';
 $user = 'YOUR_MYSQL_USERNAME';
 $pass = 'YOUR_MYSQL_PASSWORD';
