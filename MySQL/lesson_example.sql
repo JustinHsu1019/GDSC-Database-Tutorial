@@ -21,7 +21,6 @@ CREATE TABLE students (
     last_name VARCHAR(50),
     subject_id INT,
     grade DECIMAL(4,2),
-    email VARCHAR(100),
     FOREIGN KEY (subject_id) REFERENCES subjects(id)
 );
 
