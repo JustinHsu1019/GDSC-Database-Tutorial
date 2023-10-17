@@ -1,0 +1,66 @@
+* {
+    font-family: 微軟正黑體;
+}
+
+body {
+    background-color: white;
+}
+
+#username,
+#password,
+h3 {
+    width: 200px;
+    height: 20px;
+    margin: 10px;
+    color: #df5334;
+}
+
+#container1 {
+    padding: 10px;
+    width: 230px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+    border-top: 10px solid #df5334;
+    box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+    margin: auto;
+    top: 100px;
+}
+
+.system_name {
+    position: relative;
+    margin: auto;
+    top: 100px;
+    text-align: center;
+}
+
+.submit {
+    color: white;
+    background: #df5334;
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.submit:hover {
+    background: #db6937;
+}
+
+#copyright {
+    text-align: center;
+    color: #a3a2a3;
+    margin: -200px 0px 0px 0px;
+    font-size: 14px;
+}
+
+input {
+    padding: 5px;
+    border: none;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+}
