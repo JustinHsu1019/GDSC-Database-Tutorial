@@ -51,7 +51,7 @@ SELECT first_name, last_name FROM students WHERE subject_id = 2;
 
 -- 資料的排序和分組
 SELECT subject_id, COUNT(*) as num_students FROM students GROUP BY subject_id;
-SELECT first_name, last_name FROM students ORDER BY last_name DESC;
+SELECT first_name, last_name FROM students ORDER BY grade DESC;
 
 -- Section 3: Advanced Query Techniques
 
