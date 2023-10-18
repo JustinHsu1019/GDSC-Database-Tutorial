@@ -55,20 +55,6 @@ SELECT first_name, last_name FROM students ORDER BY grade DESC;
 
 -- Section 3: Advanced Query Techniques
 
--- 建立View
-CREATE VIEW view_students AS 
-SELECT 
-    first_name, 
-    last_name, 
-    email 
-FROM 
-    students 
-WHERE 
-    subject_id = 2;
-
--- 查看View
-SELECT * FROM view_students;
-
 -- JOINs
 -- 透過學生和科目資料表的JOIN，查詢學生的名字和他們所修的科目
 SELECT s.first_name, s.last_name, sub.subject_name 
@@ -77,27 +63,26 @@ INNER JOIN subjects sub ON s.subject_id = sub.id;
 
 -- 子查詢
 SELECT 
-    first_name 
-FROM 
-    students 
-WHERE 
-    subject_id IN (
-        SELECT 
-            id 
-        FROM 
-            subjects 
-        WHERE 
-            subject_name = 'History'
-    );
+    s.first_name, 
+    s.last_name, 
+    sub.subject_name 
+FROM students s
+INNER JOIN subjects sub ON s.subject_id = sub.id 
+WHERE s.grade > (
+    SELECT AVG(grade) FROM students
+);
 
+-- 建立View
+CREATE VIEW view_above_avg_students AS 
 SELECT 
-    first_name 
-FROM 
-    students 
-WHERE 
-    grade > (
-        SELECT 
-            AVG(grade) 
-        FROM 
-            students
-    );
+    s.first_name, 
+    s.last_name, 
+    sub.subject_name 
+FROM students s
+INNER JOIN subjects sub ON s.subject_id = sub.id 
+WHERE s.grade > (
+    SELECT AVG(grade) FROM students
+);
+
+-- 查看View
+SELECT * FROM view_above_avg_students;
