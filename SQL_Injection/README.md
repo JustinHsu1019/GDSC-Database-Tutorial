@@ -31,7 +31,7 @@ SELECT * FROM users WHERE username='[USERNAME]' AND password='[PASSWORD]'
 ```
 替換 [USERNAME] 後的查詢：
 ```sql
-SELECT * FROM users WHERE username='anything' OR '1' = '1' -- AND password='[PASSWORD]'
+SELECT * FROM users WHERE username='anything' OR '1' = '1' --' AND password='[PASSWORD]'
 ```
 由於 '1' = '1' 永遠為真，這意味著這次查詢會返回第一個用戶的資料，通常這是管理員賬號。這樣，即使攻擊者不知道用戶名，他們也可以登入。
 
