@@ -1,11 +1,11 @@
 # GDSC-Database-Tutorial
-## 2023/10/18 國立政治大學 Google 學生開發者社群 社課教材
+## 2023/10/18 National Chengchi University Google Developer Student Clubs - Tutorial Materials
 
-## 社課主題: 
+## Session Topic:
 ### 資料庫 Database
 
-## 社課講師: 
+## Session Lecturer:
 ### 許新翎 (Justin Hsu)
 
-## 教材作者: 
+## Material Author:
 ### 許新翎 (Justin Hsu)
