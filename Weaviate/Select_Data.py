@@ -1,3 +1,5 @@
+# 使用此 Python Script 以獲得向量資料庫的總筆數及顯示資料 
+
 import os
 import weaviate
 import consts.const as my_param

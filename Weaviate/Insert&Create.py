@@ -1,3 +1,5 @@
+# 使用此 Python Script 以新建向量資料庫及插入數據
+
 import os
 import uuid
 import weaviate

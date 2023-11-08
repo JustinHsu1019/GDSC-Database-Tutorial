@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# 參數檔
 
 # Weaviate URL
 WEAVIATE_URL = ""

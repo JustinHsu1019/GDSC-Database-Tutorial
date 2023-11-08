@@ -1,3 +1,5 @@
+# 使用此 Python Script 以從向量資料庫中取出前 N 筆語意相似的資料
+
 import os
 import weaviate
 import consts.const as my_param

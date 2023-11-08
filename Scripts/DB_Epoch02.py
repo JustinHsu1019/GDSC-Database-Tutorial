@@ -1,4 +1,4 @@
-FILE_NAME = 'database.txt'
+FILE_NAME = 'Scripts/src/database.txt'
 
 def read_record_by_id(record_id):
     with open(FILE_NAME, 'r') as file:
